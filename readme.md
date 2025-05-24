@@ -55,23 +55,23 @@ The model generates comprehensive visualizations during training to show how the
 
 #### Feature Maps and Filters Visualization
 ![Feature Maps Example](visuals/epoch_0.png)
-*Feature maps and filters at epoch 0 - shows original images, feature maps from each conv layer, and learned filters*
+*Feature maps and filters at epoch 0
 
 ![Feature Maps Example](visuals/epoch_5.png)
-*Feature maps and filters at epoch 5 - notice how filters become more specialized for facial features*
+*Feature maps and filters at epoch 5
 
 ![Feature Maps Example](visuals/epoch_9.png)
-*Feature maps and filters at epoch 9 - final learned representations optimized for gender classification*
+*Feature maps and filters at epoch 9
 
 #### Learned Filters Only
 ![Filters Only](visuals/epoch_0_filters.png)
-*Conv layer filters at epoch 0 - initial random weights*
+*Conv layer filters at epoch 0
 
 ![Filters Only](visuals/epoch_5_filters.png)
-*Conv layer filters at epoch 5 - emerging edge and texture detectors*
+*Conv layer filters at epoch 5
 
 ![Filters Only](visuals/epoch_9_filters.png)
-*Conv layer filters at epoch 9 - specialized facial feature detectors*
+*Conv layer filters at epoch 9
 
 
 ## 📁 File Structure
