@@ -1,10 +1,10 @@
-# Face Gender Detection with CNN Visualization
+# Face Gender Detection with CNN
 
-A PyTorch Lightning implementation of a Convolutional Neural Network for face gender classification with real-time feature map and filter visualization during training.
+A gender classification model based on simple convolutional neural networks. It could predict the genders of the people in images based on details learned from the CNN.
 
 ## 🎯 Project Overview
 
-This project implements a deep learning solution for binary gender classification from facial images using a custom CNN architecture. The model includes comprehensive visualization tools to understand what the network learns at each convolutional layer during training.
+This project uses the PyTorch Lightning implementation to create a convolutional neural network, which could do gender classification from facial images. The model also includes comprehensive visualization tools to help understand what the neural network is doing.
 
 ## 🏗️ Architecture
 
@@ -17,40 +17,9 @@ This project implements a deep learning solution for binary gender classificatio
 - **Fully Connected**: 128×32×32 → 256 → 2 classes
 - **Output**: Binary classification (Male/Female)
 
-### Key Features
-- **BatchNormalization** after each conv layer for stable training
-- **ReLU activation** functions
-- **Dropout (0.5)** for regularization
-- **Adam optimizer** with StepLR scheduler
-- **Real-time visualization** of feature maps and learned filters
-
-## 📊 Visualization Features
-
-The project includes comprehensive visualization tools that generate images during training:
-
-### Feature Maps Visualization
-Shows how the network processes images at each layer:
-- **Original images** (denormalized for display)
-- **Conv1 feature maps**: Early edge and texture detection
-- **Conv2 feature maps**: Facial pattern recognition  
-- **Conv3 feature maps**: High-level gender-specific features
-- **Average feature maps**: Combined channel representations
-
-### Filter Visualization
-Displays the actual learned kernels/weights:
-- **Conv1 filters**: Low-level feature detectors (edges, textures)
-- **Conv2 filters**: Mid-level pattern detectors
-- **Conv3 filters**: High-level feature detectors
-
-![Feature Maps Example](visuals/epoch_0.png)
-*Example: Feature maps and filters visualization at epoch 0*
-
-![Filters Only](visuals/epoch_0_filters.png)
-*Example: Learned filters visualization showing what each layer detects*
-
 ## 🚀 Getting Started
 
-### Prerequisites
+### Requirements
 ```bash
 pip install torch torchvision pytorch-lightning matplotlib pillow
 ```
