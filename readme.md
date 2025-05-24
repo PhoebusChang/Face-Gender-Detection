@@ -89,44 +89,6 @@ Face-Gender-Detection/
 └── README.md
 ```
 
-## 🔧 Configuration
-
-### Data Preprocessing
-```python
-transforms = transforms.Compose([
-    transforms.Resize((512, 512)),           # Resize to fixed dimensions
-    transforms.ToTensor(),                   # Convert to tensor
-    transforms.Normalize((0.5, 0.5, 0.5),   # Normalize to [-1, 1]
-                        (0.5, 0.5, 0.5))
-])
-```
-
-### Training Parameters
-- **Batch Size**: 32
-- **Learning Rate**: 0.001 (Adam optimizer)
-- **Scheduler**: StepLR (decay by 0.1 every 10 epochs)
-- **Max Epochs**: 10
-- **Train/Val Split**: 80/20
-
-## 📈 Model Performance
-
-The model tracks training and validation loss with PyTorch Lightning's built-in logging:
-- Real-time loss visualization in progress bars
-- Automatic GPU/CPU device selection
-- Mixed precision training support
-
-## 🎨 Visualization Details
-
-### Feature Map Interpretation
-- **Bright areas (yellow)**: High activation regions
-- **Dark areas (purple)**: Low activation regions
-- **Progressive abstraction**: Conv1→Conv2→Conv3 shows increasing feature complexity
-
-### Filter Interpretation
-- **Red regions**: Positive weights
-- **Blue regions**: Negative weights
-- **Filter evolution**: Shows how kernels adapt during training
-
 ## 🔍 Usage Examples
 
 ### Training
