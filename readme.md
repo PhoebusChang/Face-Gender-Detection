@@ -27,15 +27,26 @@ pip install torch torchvision pytorch-lightning matplotlib pillow
 ### Dataset Structure
 ```
 datasets/
-└── ashwingupta3012/
-    └── male-and-female-faces-dataset/
+└── cashutosh/
+    └── gender-classification-dataset/
         └── versions/1/
-            └── Male and Female face dataset/
+            ├── Training/
+            │   ├── male/
+            │   │   ├── image1.jpg
+            │   │   ├── image2.jpg
+            │   │   └── ...
+            │   └── female/
+            │       ├── image1.jpg
+            │       ├── image2.jpg
+            │       └── ...
+            └── Validation/
                 ├── male/
-                │   ├── image1.jpg
+                │   ├── val_image1.jpg
+                │   ├── val_image2.jpg
                 │   └── ...
                 └── female/
-                    ├── image1.jpg
+                    ├── val_image1.jpg
+                    ├── val_image2.jpg
                     └── ...
 ```
 
