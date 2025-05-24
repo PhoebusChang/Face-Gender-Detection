@@ -17,15 +17,15 @@ transforms = transforms.Compose([
     transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
 ])
 
-dataset = datasets.ImageFolder(
-    root='datasets/ashwingupta3012/male-and-female-faces-dataset/versions/1/Male and Female face dataset',
+train_dataset = datasets.ImageFolder(
+    root='datasets/cashutosh/gender-classification-dataset/versions/1/Training',
     transform=transforms
 )
 
-train_size = int(0.8 * len(dataset))
-val_size = len(dataset) - train_size
-
-train_dataset, val_dataset = random_split(dataset, [train_size, val_size])
+val_dataset = datasets.ImageFolder(
+    root='datasets/cashutosh/gender-classification-dataset/versions/1/Validation',
+    transform=transforms
+)
 
 train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
 val_loader = DataLoader(val_dataset, batch_size=32, shuffle=False)
@@ -254,3 +254,5 @@ trainer = pl.Trainer(
     devices='auto'
 )
 trainer.fit(model, train_loader, val_loader)
+
+torch.save(model.state_dict(), 'model.pth')

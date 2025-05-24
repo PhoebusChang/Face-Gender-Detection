@@ -5,6 +5,6 @@ import os
 os.environ["KAGGLEHUB_CACHE"] = "./"
 
 # Download dataset
-path = kagglehub.dataset_download("ashwingupta3012/male-and-female-faces-dataset")
+path = kagglehub.dataset_download("cashutosh/gender-classification-dataset")
 
 print("Path to dataset files:", path)
